@@ -4,11 +4,13 @@
 void UBullCowCartridge::BeginPlay() // When the game starts
 {
     Super::BeginPlay();
-    PrintLine("Welcome in Bull and Cow Terminal Game!");
-    PrintLine("Please hit enter to continue...");
+    PrintLine(TEXT("Welcome in Bull and Cow Terminal Game!"));
+    PrintLine(TEXT("Please hit enter to continue..."));
 }
 
 void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
 {
     ClearScreen();
+
+    FString HiddenWord = TEXT("lunch");
 }
