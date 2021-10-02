@@ -9,9 +9,10 @@ void UBullCowCartridge::BeginPlay() // When the game starts
 
     SetupGame();
 
-    const FString WordListPath = FPaths::ProjectContentDir() / TEXT("WordLists/HiddenWordList.txt");
+    const FString WordListPath = FPaths::ProjectContentDir() / TEXT("WordsLists/HiddenWordList.txt");
     FFileHelper::LoadFileToStringArray(Words, *WordListPath);
 
+    PrintLine(TEXT("The number of possible words is: %i"), Words.Num());
     PrintLine(TEXT("Hidden word is: %s \nIt is %i characters long."), *HiddenWord, HiddenWord.Len()); // Debug line
 }
 
